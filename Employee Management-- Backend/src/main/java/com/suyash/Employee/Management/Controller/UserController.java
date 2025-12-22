@@ -18,7 +18,7 @@ import com.suyash.Employee.Management.Repo.UserRepo;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
-public class UserController {
+public class UserController { 
     @Autowired
     private UserRepo userRepo;
 
