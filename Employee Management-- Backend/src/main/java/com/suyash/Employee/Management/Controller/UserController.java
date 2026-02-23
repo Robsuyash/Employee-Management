@@ -37,7 +37,7 @@ public class UserController {
         return userRepo.findById(id).orElseThrow(() -> new UserNotFoundException(id));
     }
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/user/{id}") //can use patch for somes specific changes, this is mapped like user--id
     User update(@RequestBody User newuser, @PathVariable Long id) {
         return userRepo.findById(id).map(user -> {
             user.setName(newuser.getName());
